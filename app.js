@@ -30,18 +30,20 @@ const displayProfile = (data)=> {
    <div class="row g-0">
    <div class="col-md-4">
      <img 
-     src="..." 
-     class="img-fluid rounded-start" 
+     src="${data.avatar_url}" 
+     class="img-fluid rounded" 
      alt="..."
      />
    </div>
    <div class="col-md-8">
      <div class="card-body">
-       <h5 class="card-title">Card title</h5>
-       <p class="card-text">
-       This is a wider card with supporting text below as a natural 
-       lead-in to additional content. This content is a little bit longer.
-       </p>
+       <h5 class="card-title">${data.name}</h5>
+       <p class="card-text">${data.bio}</p>
+       <span class="fw-light">
+       followers:${data.followers}
+       following:${data.following}
+       public-repo:${data.public_repos}
+       </span>
      </div>
    </div>
   </div>
